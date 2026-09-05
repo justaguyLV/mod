@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "duskui",
+  "version": "${version}",
+  "name": "DuskUI",
+  "description": "Recolors the vanilla interface (menus, buttons, tooltips, sliders, tabs, HUD bars) into a black + curated accent-color theme. Client-side only; built to sit alongside Sodium, Lithium, and Wurst without conflicts.",
+  "authors": ["you"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/duskui/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.duskui.mod.DuskUIClient"
+    ]
+  },
+  "mixins": [
+    "duskui.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "fabric-api": "*",
+    "minecraft": "1.20.1",
+    "java": ">=17"
+  },
+  "custom": {
+    "duskui:compat": {
+      "sodium": "no shared mixin targets — Sodium replaces the chunk/entity renderer, DuskUI only touches Screen/Widget classes",
+      "lithium": "server/game-logic optimizations only, zero UI overlap",
+      "wurst": "DuskUI never mixes into Wurst's own ClickGUI classes, only vanilla ones, so both can theme independently"
+    }
+  }
+}

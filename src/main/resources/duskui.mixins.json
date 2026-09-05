@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.duskui.mod.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "ScreenMixin",
+    "ButtonWidgetMixin",
+    "TooltipRenderMixin",
+    "SliderWidgetMixin",
+    "SliderWidgetAccessor",
+    "HandledScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
