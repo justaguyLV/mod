@@ -17,17 +17,13 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew || true
-
-      - name: Generate Gradle wrapper
-        run: gradle wrapper --gradle-version 8.5
-
-      - name: Grant execute permission for gradlew (again, wrapper just created)
-        run: chmod +x gradlew
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: 8.5
 
       - name: Build
-        run: ./gradlew build --no-daemon
+        run: gradle build --no-daemon
 
       - name: Upload built jar
         uses: actions/upload-artifact@v4
