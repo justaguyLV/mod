@@ -8,8 +8,7 @@
     "ButtonWidgetMixin",
     "TooltipRenderMixin",
     "SliderWidgetMixin",
-    "SliderWidgetAccessor",
-    "HandledScreenMixin"
+    "SliderWidgetAccessor"
   ],
   "injectors": {
     "defaultRequire": 1
